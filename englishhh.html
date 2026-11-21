@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B1–B2Vocab Master — 326 Նոր Բառ (40 Բառ Օրական)</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface-2: #273549;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --success: #10b981;
+      --danger: #ef4444;
+      --radius: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .app {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 20px 16px 60px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 54px;
+      height: 46px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .brand h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .brand p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .stats {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      display: flex;
+      gap: 6px;
+    }
+
+    .stat-pill strong {
+      color: #a5b4fc;
+    }
+
+    .btn-ghost {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: 0.2s;
+    }
+
+    .btn-ghost:hover {
+      background: var(--surface-2);
+    }
+
+    .controls-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .view-switch {
+      display: flex;
+      background: var(--surface);
+      padding: 4px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .switch-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 8px 14px;
+      border-radius: 9px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .switch-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .search-box input {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 14px;
+      border-radius: 10px;
+      width: 270px;
+      font-size: 0.92rem;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: var(--primary);
+    }
+
+    .selector-strip {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 16px 0 8px;
+      scrollbar-width: thin;
+    }
+
+    .sel-chip {
+      flex: 0 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 600;
+      transition: 0.2s;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 118px;
+    }
+
+    .sel-chip span {
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .sel-chip.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: var(--primary);
+    }
+
+    .sel-chip.done {
+      border-color: var(--success);
+    }
+
+    .mode-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin: 14px 0 20px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 14px;
+    }
+
+    .mode-btn {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .mode-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .list-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 14px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      border-color: var(--primary);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .chunk-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+
+    .chunk-header {
+      background: var(--surface-2);
+      padding: 12px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .word-row {
+      display: grid;
+      grid-template-columns: 44px 1fr 1.3fr 90px;
+      align-items: center;
+      padding: 12px 18px;
+      border-top: 1px solid var(--border);
+      gap: 10px;
+      transition: background 0.15s;
+    }
+
+    .word-row:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .word-row.learned {
+      background: rgba(16, 185, 129, 0.08);
+    }
+
+    .word-num {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .word-en {
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .word-hy {
+      color: #cbd5e1;
+      font-size: 0.96rem;
+    }
+
+    .blur-text {
+      filter: blur(6px);
+      user-select: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .blur-text:hover {
+      filter: blur(0);
+    }
+
+    .row-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 0.95rem;
+    }
+
+    .icon-btn.checked {
+      background: var(--success);
+      border-color: var(--success);
+      color: #fff;
+    }
+
+    .flashcard-wrap {
+      max-width: 580px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .flashcard-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .card-scene {
+      perspective: 1000px;
+      height: 290px;
+      cursor: pointer;
+      margin-bottom: 18px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.55s;
+      transform-style: preserve-3d;
+    }
+
+    .card-inner.flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      background: var(--surface-2);
+    }
+
+    .card-lang {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .card-word {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .card-hint {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .flashcard-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .quiz-box {
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px;
+    }
+
+    .quiz-progress {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+
+    .quiz-question {
+      font-size: 1.7rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .quiz-opt {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 14px 18px;
+      border-radius: 12px;
+      text-align: left;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .quiz-opt:hover:not(:disabled) {
+      border-color: var(--primary);
+    }
+
+    .quiz-opt.correct {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--success);
+      color: #6ee7b7;
+    }
+
+    .quiz-opt.wrong {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: var(--danger);
+      color: #fca5a5;
+    }
+
+    .match-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .match-col {
+      display: grid;
+      gap: 10px;
+    }
+
+    .match-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 14px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      text-align: center;
+      transition: 0.15s;
+    }
+
+    .match-card.selected {
+      border-color: var(--primary);
+      background: rgba(99, 102, 241, 0.2);
+    }
+
+    .match-card.matched {
+      opacity: 0.35;
+      border-color: var(--success);
+      pointer-events: none;
+    }
+
+    .match-card.error {
+      border-color: var(--danger);
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    @media (max-width: 680px) {
+      .word-row {
+        grid-template-columns: 32px 1fr;
+        gap: 6px;
+      }
+      .word-hy {
+        grid-column: 2;
+      }
+      .row-actions {
+        grid-column: 2;
+        justify-content: flex-start;
+      }
+      .search-box input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">320</div>
+        <div>
+          <h1>Նոր Բառապաշար (B1–B2)</h1>
+          <p>20-ական շարքեր • Օրական 40 բառի ծրագիր</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat-pill">
+          <span>Այսօր սովորած՝</span>
+          <strong id="todayCount">0 / 40</strong>
+        </div>
+        <div class="stat-pill">
+          <span>Ընդհանուր առաջընթաց՝</span>
+          <strong id="totalLearned">0 / 320</strong>
+        </div>
+        <button id="resetProgressBtn" class="btn-ghost" title="Զրոյացնել առաջընթացը">↺</button>
+      </div>
+    </header>
+
+    <section class="controls-bar">
+      <div class="view-switch">
+        <button class="switch-btn active" data-scope="day">📅 Օրական 40 բառ (Օր 1–8)</button>
+        <button class="switch-btn" data-scope="group">📦 20-ական շարքեր (Խումբ 1–16)</button>
+      </div>
+
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Որոնել անգլերեն կամ հայերեն..." />
+      </div>
+    </section>
+
+    <nav class="selector-strip" id="selectorStrip"></nav>
+
+    <section class="mode-tabs">
+      <button class="mode-btn active" data-mode="list">📋 Բառացանկ (20-ական)</button>
+      <button class="mode-btn" data-mode="flashcards">🗂️ Քարտեր (Flashcards)</button>
+      <button class="mode-btn" data-mode="quiz">✍️ Թեստ</button>
+      <button class="mode-btn" data-mode="match">🧩 Համապատասխանեցում</button>
+    </section>
+
+    <main id="mainContent" class="main-content"></main>
+  </div>
+
+  <script>
+    const RAW_WORDS = [
+      // Օր 1 (40 բառ)
+      ["permit", "թույլ տալ (պաշտոնական/կանոնով)"],
+      ["enable", "հնարավորություն տալ"],
+      ["enhance", "բարելավել, ուժեղացնել"],
+      ["expand", "ընդլայնել, մեծացնել"],
+      ["boost", "խթանել, բարձրացնել"],
+      ["reduce", "նվազեցնել, կրճատել"],
+      ["vital", "կենսական, շատ կարևոր"],
+      ["prevent", "կանխել"],
+      ["select", "ընտրել"],
+      ["clarify", "պարզաբանել, հստակեցնել"],
+      ["assist", "օգնել, աջակցել"],
+      ["occur", "տեղի ունենալ"],
+      ["postpone", "հետաձգել"],
+      ["vanish", "անհետանալ"],
+      ["reply", "պատասխանել"],
+      ["achieve", "հասնել (նպատակին)"],
+      ["approach", "մոտեցում, մոտենալ"],
+      ["benefit", "օգուտ, առավելություն"],
+      ["consist", "բաղկացած լինել"],
+      ["create", "ստեղծել"],
+      ["develop", "զարգացնել, մշակել"],
+      ["effective", "արդյունավետ"],
+      ["effort", "ջանք"],
+      ["focus", "կենտրոնանալ"],
+      ["impact", "ազդեցություն"],
+      ["likely", "հավանական"],
+      ["method", "մեթոդ, եղանակ"],
+      ["provide", "ապահովել, տրամադրել"],
+      ["require", "պահանջել"],
+      ["result", "արդյունք"],
+      ["available", "հասանելի, առկա"],
+      ["basic", "հիմնական, տարրական"],
+      ["complete", "ամբողջական, ավարտել"],
+      ["contain", "պարունակել"],
+      ["current", "ընթացիկ, ներկայիս"],
+      ["feature", "առանձնահատկություն"],
+      ["final", "վերջնական"],
+      ["general", "ընդհանուր"],
+      ["local", "տեղական"],
+      ["main", "գլխավոր, հիմնական"],
+
+      // Օր 2 (40 բառ)
+      ["process", "գործընթաց"],
+      ["project", "նախագիծ"],
+      ["service", "ծառայություն"],
+      ["specific", "կոնկրետ, որոշակի"],
+      ["system", "համակարգ"],
+      ["argue", "վիճել, փաստարկ բերել"],
+      ["attitude", "վերաբերմունք"],
+      ["aware", "տեղյակ, գիտակից"],
+      ["claim", "պնդել, պնդում"],
+      ["comment", "մեկնաբանել, մեկնաբանություն"],
+      ["communicate", "հաղորդակցվել"],
+      ["concern", "մտահոգություն, վերաբերել"],
+      ["convince", "համոզել"],
+      ["express", "արտահայտել"],
+      ["honest", "ազնիվ"],
+      ["impress", "տպավորել"],
+      ["persuade", "համոզել"],
+      ["react", "արձագանքել"],
+      ["view", "տեսակետ, դիտել"],
+      ["attempt", "փորձ, փորձել"],
+      ["average", "միջին"],
+      ["capable", "ունակ"],
+      ["compete", "մրցել"],
+      ["confident", "ինքնավստահ"],
+      ["creative", "ստեղծագործական"],
+      ["determined", "վճռական"],
+      ["fail", "ձախողվել"],
+      ["gain", "ձեռք բերել, շահել"],
+      ["limit", "սահման, սահմանափակել"],
+      ["overcome", "հաղթահարել"],
+      ["progress", "առաջընթաց"],
+      ["skill", "հմտություն"],
+      ["struggle", "պայքարել, դժվարությամբ անել"],
+      ["afford", "ֆինանսապես կարողանալ թույլ տալ"],
+      ["apply", "դիմել, կիրառել"],
+      ["budget", "բյուջե"],
+      ["charge", "գումար գանձել, լիցքավորել"],
+      ["customer", "հաճախորդ"],
+      ["deliver", "առաքել"],
+      ["demand", "պահանջարկ, պահանջել"],
+
+      // Օր 3 (40 բառ)
+      ["earn", "վաստակել"],
+      ["employ", "աշխատանքի ընդունել"],
+      ["expense", "ծախս"],
+      ["income", "եկամուտ"],
+      ["invest", "ներդրում անել"],
+      ["offer", "առաջարկել, առաջարկ"],
+      ["profit", "շահույթ"],
+      ["value", "արժեք, գնահատել"],
+      ["access", "մուտք, հասանելիություն"],
+      ["accurate", "ճշգրիտ"],
+      ["alternative", "այլընտրանք"],
+      ["cause", "պատճառ, առաջացնել"],
+      ["common", "ընդհանուր, տարածված"],
+      ["compare", "համեմատել"],
+      ["condition", "պայման, վիճակ"],
+      ["contrast", "հակադրություն, տարբերություն"],
+      ["despite", "չնայած"],
+      ["factor", "գործոն"],
+      ["however", "սակայն, այնուամենայնիվ"],
+      ["instead", "փոխարենը"],
+      ["similar", "նման"],
+      ["therefore", "հետևաբար"],
+      ["annual", "տարեկան"],
+      ["arrange", "կազմակերպել, դասավորել"],
+      ["attend", "հաճախել, ներկա գտնվել"],
+      ["cancel", "չեղարկել"],
+      ["consider", "դիտարկել, համարել"],
+      ["decade", "տասնամյակ"],
+      ["duty", "պարտականություն"],
+      ["exact", "ճշգրիտ, հստակ"],
+      ["immediate", "անհապաղ, անմիջական"],
+      ["notice", "նկատել"],
+      ["obvious", "ակնհայտ"],
+      ["period", "ժամանակաշրջան"],
+      ["regular", "կանոնավոր"],
+      ["urgent", "հրատապ"],
+      ["affect", "ազդել"],
+      ["citizen", "քաղաքացի"],
+      ["community", "համայնք"],
+      ["culture", "մշակույթ"],
+
+      // Օր 4 (40 բառ)
+      ["damage", "վնաս, վնասել"],
+      ["energy", "էներգիա"],
+      ["global", "համաշխարհային, գլոբալ"],
+      ["law", "օրենք"],
+      ["natural", "բնական"],
+      ["pollution", "աղտոտվածություն"],
+      ["population", "բնակչություն"],
+      ["protect", "պաշտպանել"],
+      ["public", "հանրային, հասարակություն"],
+      ["resource", "ռեսուրս, պաշար"],
+      ["society", "հասարակություն"],
+      ["ability", "ունակություն"],
+      ["active", "ակտիվ"],
+      ["balance", "հավասարակշռություն"],
+      ["behavior", "վարքագիծ"],
+      ["concentrate", "կենտրոնանալ"],
+      ["daily", "ամենօրյա"],
+      ["educate", "կրթել"],
+      ["encourage", "քաջալերել, ոգևորել"],
+      ["habit", "սովորություն"],
+      ["healthy", "առողջ"],
+      ["knowledge", "գիտելիք"],
+      ["mental", "մտավոր, հոգեկան"],
+      ["physical", "ֆիզիկական"],
+      ["research", "հետազոտություն"],
+      ["stress", "սթրես, լարվածություն"],
+      ["admit", "ընդունել (մեղքը, փաստը)"],
+      ["aim", "նպատակ, նպատակ ունենալ"],
+      ["announce", "հայտարարել"],
+      ["approve", "հավանություն տալ, հաստատել"],
+      ["attract", "գրավել, ձգել"],
+      ["behave", "վարվել, պահել իրեն"],
+      ["blame", "մեղադրել, մեղք"],
+      ["border", "սահման, սահմանակցել"],
+      ["broad", "լայն, ընդարձակ"],
+      ["calculate", "հաշվարկել"],
+      ["campaign", "արշավ"],
+      ["capture", "գրավել, ֆիքսել"],
+      ["career", "կարիերա"],
+      ["category", "կատեգորիա, դաս"],
+
+      // Օր 5 (40 բառ)
+      ["certain", "վստահ, որոշակի"],
+      ["characteristic", "բնորոշ գիծ, բնութագրական"],
+      ["civil", "քաղաքացիական"],
+      ["classify", "դասակարգել"],
+      ["client", "հաճախորդ"],
+      ["combine", "միավորել, համատեղել"],
+      ["command", "հրաման, հրամայել, տիրապետել"],
+      ["commit", "կատարել (քայլ), պարտավորվել"],
+      ["company", "ընկերություն"],
+      ["competitive", "մրցունակ"],
+      ["complex", "բարդ, համալիր"],
+      ["component", "բաղադրիչ"],
+      ["conclude", "եզրակացնել, ավարտել"],
+      ["conduct", "անցկացնել (փորձ, հետազոտություն)"],
+      ["connect", "կապել, միացնել"],
+      ["consequence", "հետևանք"],
+      ["consistent", "հետևողական, կայուն"],
+      ["construct", "կառուցել"],
+      ["consume", "սպառել"],
+      ["content", "բովանդակություն, գոհ"],
+      ["context", "համատեքստ"],
+      ["continue", "շարունակել"],
+      ["contribute", "ներդրում ունենալ, նպաստել"],
+      ["control", "վերահսկել, վերահսկողություն"],
+      ["convert", "փոխակերպել, վերափոխել"],
+      ["cooperate", "համագործակցել"],
+      ["correct", "ճիշտ, ուղղել"],
+      ["cost", "արժենալ, արժեք"],
+      ["coverage", "լուսաբանում, ծածկույթ"],
+      ["credit", "վարկ, վստահություն, վերագրել"],
+      ["crime", "հանցագործություն"],
+      ["crisis", "ճգնաժամ"],
+      ["critical", "քննադատական, կարևոր"],
+      ["crop", "բերք, մշակաբույս"],
+      ["curious", "հետաքրքրասեր"],
+      ["custom", "սովորույթ, ավանդույթ"],
+      ["cycle", "ցիկլ, շրջապտույտ"],
+      ["data", "տվյալներ"],
+      ["debate", "բանավեճ, բանավիճել"],
+      ["declare", "հայտարարել"],
+
+      // Օր 6 (40 բառ)
+      ["define", "սահմանել, բնորոշել"],
+      ["defeat", "պարտություն, հաղթել"],
+      ["defend", "պաշտպանել"],
+      ["delaying", "հետաձգող"],
+      ["demonstrate", "ցուցադրել, ապացուցել"],
+      ["deny", "հերքել, մերժել"],
+      ["depart", "մեկնել, հեռանալ"],
+      ["deposit", "ավանդ, մուծել"],
+      ["deserve", "արժանի լինել"],
+      ["design", "նախագծել, դիզայն"],
+      ["desire", "ցանկություն, ցանկանալ"],
+      ["detect", "հայտնաբերել, նկատել"],
+      ["determine", "որոշել, պայմանավորել"],
+      ["device", "սարք, սարքավորում"],
+      ["differ", "տարբերվել"],
+      ["direction", "ուղղություն"],
+      ["direct", "ուղղակի, ուղղորդել"],
+      ["disagree", "համաձայն չլինել"],
+      ["display", "ցուցադրել, ցուցադրություն"],
+      ["distribute", "բաշխել, տարածել"],
+      ["divide", "բաժանել"],
+      ["document", "փաստաթուղթ, փաստագրել"],
+      ["domestic", "ներքին, կենցաղային"],
+      ["dominant", "գերիշխող, գլխավոր"],
+      ["draft", "սևագիր, կազմել"],
+      ["dramatic", "կտրուկ, տպավորիչ"],
+      ["economic", "տնտեսական"],
+      ["economy", "տնտեսություն"],
+      ["edition", "հրատարակություն"],
+      ["efficient", "արդյունավետ"],
+      ["elect", "ընտրել (քվեարկությամբ)"],
+      ["element", "տարր, բաղադրիչ"],
+      ["eliminate", "վերացնել, բացառել"],
+      ["emerge", "ի հայտ գալ, առաջանալ"],
+      ["emotion", "հույզ, զգացմունք"],
+      ["emphasis", "շեշտադրում"],
+      ["employ", "կիրառել, աշխատանքի ընդունել"],
+      ["encounter", "բախվել, հանդիպել"],
+      ["engage", "ներգրավվել, զբաղվել"],
+      ["enhance", "ուժեղացնել"],
+
+      // Օր 7 (40 բառ)
+      ["enormous", "վիթխարի, հսկայական"],
+      ["ensure", "ապահովել, երաշխավորել"],
+      ["enter", "մտնել, մուտք գործել"],
+      ["entire", "ամբողջական, ամբողջ"],
+      ["entry", "մուտք, գրառում"],
+      ["equal", "հավասար"],
+      ["equipment", "սարքավորում"],
+      ["error", "սխալ"],
+      ["essential", "էական, անհրաժեշտ"],
+      ["event", "իրադարձություն"],
+      ["eventually", "ի վերջո, վերջապես"],
+      ["evidence", "ապացույց"],
+      ["exact", "ճշգրիտ"],
+      ["examine", "քննել, ուսումնասիրել"],
+      ["example", "օրինակ"],
+      ["exceed", "գերազանցել"],
+      ["exchange", "փոխանակել, փոխանակում"],
+      ["exclude", "բացառել"],
+      ["excuse", "արդարացում, ներել"],
+      ["execute", "իրականացնել, կատարել"],
+      ["exercise", "վարժություն, մարզվել"],
+      ["exist", "գոյություն ունենալ"],
+      ["expand", "ընդլայնել"],
+      ["expectation", "ակնկալիք"],
+      ["expert", "փորձագետ"],
+      ["explain", "բացատրել"],
+      ["explanation", "բացատրություն"],
+      ["explore", "հետազոտել"],
+      ["export", "արտահանել, արտահանում"],
+      ["expose", "բացահայտել, ենթարկել"],
+      ["extend", "երկարացնել, ընդլայնել"],
+      ["extent", "չափ, աստիճան"],
+      ["external", "արտաքին"],
+      ["extra", "լրացուցիչ"],
+      ["extreme", "ծայրահեղ"],
+      ["facility", "հարմարություն, հաստատություն"],
+      ["factory", "գործարան"],
+      ["failure", "ձախողում"],
+      ["fair", "արդար, տոնավաճառ"],
+      ["familiar", "ծանոթ"],
+
+      // Օր 8 (40 բառ)
+      ["famous", "հայտնի"],
+      ["fashion", "նորաձևություն, եղանակ"],
+      ["fault", "մեղք, թերություն"],
+      ["favor", "բարեհաճություն, աջակցել"],
+      ["feature", "հատկանիշ"],
+      ["federal", "դաշնային"],
+      ["fee", "վճար, տուրք"],
+      ["female", "իգական"],
+      ["fence", "ցանկապատ"],
+      ["field", "ոլորտ, դաշտ"],
+      ["figure", "թիվ, կերպար"],
+      ["file", "ֆայլ, գործ"],
+      ["fill", "լցնել, լրացնել"],
+      ["film", "ֆիլմ, նկարահանել"],
+      ["finance", "ֆինանսներ, ֆինանսավորել"],
+      ["finding", "բացահայտում, արդյունք"],
+      ["firm", "ընկերություն, ամուր"],
+      ["flexible", "ճկուն"],
+      ["flight", "թռիչք"],
+      ["float", "լողալ (մակերեսին)"],
+      ["flood", "ջրհեղեղ, ողողել"],
+      ["flow", "հոսք, հոսել"],
+      ["follow", "հետևել"],
+      ["force", "ուժ, ստիպել"],
+      ["forecast", "կանխատեսում, կանխատեսել"],
+      ["foreign", "արտասահմանյան"],
+      ["forest", "անտառ"],
+      ["forever", "ընդմիշտ"],
+      ["forget", "մոռանալ"],
+      ["forgive", "ներել"],
+      ["form", "ձև, ձևավորել"],
+      ["formal", "պաշտոնական, ձևական"],
+      ["format", "ձևաչափ"],
+      ["former", "նախկին"],
+      ["formula", "բանաձև"],
+      ["fortune", "հաջողություն, կարողություն"],
+      ["forward", "առաջ"],
+      ["found", "հիմնադրել"],
+      ["foundation", "հիմք, հիմնադրամ"],
+      ["frame", "շրջանակ"]
+    ];
+
+    const seen = new Set();
+    const WORDS = RAW_WORDS
+      .filter(([en]) => {
+        const key = en.toLowerCase().trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      })
+      .slice(0, 320)
+      .map(([en, hy], idx) => ({ id: idx + 1, en, hy }));
+
+    const DAY_SIZE = 40;
+    const GROUP_SIZE = 20;
+    const DAYS_COUNT = Math.ceil(WORDS.length / DAY_SIZE);
+    const GROUPS_COUNT = Math.ceil(WORDS.length / GROUP_SIZE);
+
+    const STORAGE_KEY = "b1_b2_unique_320_vocab_v1";
+    let state = loadState();
+
+    function loadState() {
+      const todayKey = new Date().toISOString().slice(0, 10);
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+        return {
+          learnedIds: Array.isArray(saved.learnedIds) ? saved.learnedIds : [],
+          todayDate: saved.todayDate === todayKey ? todayKey : todayKey,
+          todayIds: saved.todayDate === todayKey && Array.isArray(saved.todayIds) ? saved.todayIds : [],
+          scope: saved.scope || "day",
+          activeDay: saved.activeDay || 0,
+          activeGroup: saved.activeGroup || 0,
+          mode: saved.mode || "list",
+          hideHy: false,
+          hideEn: false
+        };
+      } catch {
+        return {
+          learnedIds: [],
+          todayDate: todayKey,
+          todayIds: [],
+          scope: "day",
+          activeDay: 0,
+          activeGroup: 0,
+          mode: "list",
+          hideHy: false,
+          hideEn: false
+        };
+      }
+    }
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function speak(text) {
+      if (!("speechSynthesis" in window)) return;
+      window.speechSynthesis.cancel();
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = "en-US";
+      utter.rate = 0.94;
+      window.speechSynthesis.speak(utter);
+    }
+
+    function toggleLearned(id) {
+      const idx = state.learnedIds.indexOf(id);
+      if (idx === -1) {
+        state.learnedIds.push(id);
+        if (!state.todayIds.includes(id)) state.todayIds.push(id);
+      } else {
+        state.learnedIds.splice(idx, 1);
+      }
+      saveState();
+      updateStats();
+      renderMain();
+      renderSelector();
+    }
+
+    function updateStats() {
+      document.getElementById("todayCount").textContent = `${state.todayIds.length} / 40`;
+      document.getElementById("totalLearned").textContent = `${state.learnedIds.length} / ${WORDS.length}`;
+    }
+
+    function getCurrentSlice() {
+      const q = document.getElementById("searchInput").value.trim().toLowerCase();
+      if (q) {
+        return WORDS.filter(
+          w => w.en.toLowerCase().includes(q) || w.hy.toLowerCase().includes(q)
+        );
+      }
+      if (state.scope === "day") {
+        const start = state.activeDay * DAY_SIZE;
+        return WORDS.slice(start, start + DAY_SIZE);
+      } else {
+        const start = state.activeGroup * GROUP_SIZE;
+        return WORDS.slice(start, start + GROUP_SIZE);
+      }
+    }
+
+    function renderSelector() {
+      const strip = document.getElementById("selectorStrip");
+      const q = document.getElementById("searchInput").value.trim();
+      if (q) {
+        strip.innerHTML = `<div class="sel-chip active">Որոնման արդյունք<span>Ամբողջ բառարանից</span></div>`;
+        return;
+      }
+
+      if (state.scope === "day") {
+        strip.innerHTML = Array.from({ length: DAYS_COUNT }, (_, i) => {
+          const slice = WORDS.slice(i * DAY_SIZE, i * DAY_SIZE + DAY_SIZE);
+          const learnedCount = slice.filter(w => state.learnedIds.includes(w.id)).length;
+          const isDone = learnedCount === slice.length;
+          return `
+            <button class="sel-chip ${state.activeDay === i ? "active" : ""} ${isDone ? "done" : ""}" data-idx="${i}">
+              Օր ${i + 1} (${slice.length} բառ)
+              <span>Սովորած՝ ${learnedCount}/${slice.length}</span>
+            </button>
+          `;
+        }).join("");
+      } else {
+        strip.innerHTML = Array.from({ length: GROUPS_COUNT }, (_, i) => {
+          const slice = WORDS.slice(i * GROUP_SIZE, i * GROUP_SIZE + GROUP_SIZE);
+          const learnedCount = slice.filter(w => state.learnedIds.includes(w.id)).length;
+          const isDone = learnedCount === slice.length;
+          return `
+            <button class="sel-chip ${state.activeGroup === i ? "active" : ""} ${isDone ? "done" : ""}" data-idx="${i}">
+              Խումբ ${i + 1} (${slice.length} բառ)
+              <span>Սովորած՝ ${learnedCount}/${slice.length}</span>
+            </button>
+          `;
+        }).join("");
+      }
+
+      strip.querySelectorAll(".sel-chip[data-idx]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const idx = Number(btn.dataset.idx);
+          if (state.scope === "day") state.activeDay = idx;
+          else state.activeGroup = idx;
+          saveState();
+          renderSelector();
+          renderMain();
+        });
+      });
+    }
+
+    function renderMain() {
+      const main = document.getElementById("mainContent");
+      const words = getCurrentSlice();
+
+      if (!words.length) {
+        main.innerHTML = `<div class="chunk-block"><div class="chunk-header">Բառեր չեն գտնվել</div></div>`;
+        return;
+      }
+
+      if (state.mode === "list") renderList(main, words);
+      else if (state.mode === "flashcards") renderFlashcards(main, words);
+      else if (state.mode === "quiz") renderQuiz(main, words);
+      else if (state.mode === "match") renderMatch(main, words);
+    }
+
+    function renderList(container, words) {
+      const chunks = [];
+      for (let i = 0; i < words.length; i += 20) {
+        chunks.push(words.slice(i, i + 20));
+      }
+
+      container.innerHTML = `
+        <div class="list-toolbar">
+          <div><strong>${words.length} բառ</strong> ընթացիկ հատվածում (բաժանված 20-ական շարքերով)</div>
+          <div class="toolbar-actions">
+            <button class="btn" id="toggleHyBtn">${state.hideHy ? "Ցույց տալ հայերենը" : "Թաքցնել հայերենը"}</button>
+            <button class="btn" id="toggleEnBtn">${state.hideEn ? "Ցույց տալ անգլերենը" : "Թաքցնել անգլերենը"}</button>
+          </div>
+        </div>
+        ${chunks.map((chunk, cIdx) => `
+          <div class="chunk-block">
+            <div class="chunk-header">
+              <span>Շարք ${cIdx + 1} (${chunk.length} բառ)</span>
+              <span>${chunk.filter(w => state.learnedIds.includes(w.id)).length} / ${chunk.length} սովորած</span>
+            </div>
+            ${chunk.map((w, idx) => {
+              const isLearned = state.learnedIds.includes(w.id);
+              return `
+                <div class="word-row ${isLearned ? "learned" : ""}">
+                  <div class="word-num">${idx + 1}</div>
+                  <div class="word-en">
+                    <span class="${state.hideEn ? "blur-text" : ""}">${w.en}</span>
+                  </div>
+                  <div class="word-hy">
+                    <span class="${state.hideHy ? "blur-text" : ""}">${w.hy}</span>
+                  </div>
+                  <div class="row-actions">
+                    <button class="icon-btn" onclick="speak('${w.en.replace(/'/g, "\\'")}')" title="Լսել">🔊</button>
+                    <button class="icon-btn ${isLearned ? "checked" : ""}" onclick="toggleLearned(${w.id})" title="Նշել որպես սովորած">✓</button>
+                  </div>
+                </div>
+              `;
+            }).join("")}
+          </div>
+        `).join("")}
+      `;
+
+      document.getElementById("toggleHyBtn").onclick = () => {
+        state.hideHy = !state.hideHy;
+        renderMain();
+      };
+      document.getElementById("toggleEnBtn").onclick = () => {
+        state.hideEn = !state.hideEn;
+        renderMain();
+      };
+    }
+
+    let fcDeck = [];
+    let fcIndex = 0;
+    let fcFlipped = false;
+    let fcReverse = false;
+
+    function renderFlashcards(container, words) {
+      if (!fcDeck.length || !fcDeck.some(d => words.some(w => w.id === d.id))) {
+        fcDeck = [...words];
+        fcIndex = 0;
+        fcFlipped = false;
+      }
+      const card = fcDeck[fcIndex % fcDeck.length];
+      const frontText = fcReverse ? card.hy : card.en;
+      const backText = fcReverse ? card.en : card.hy;
+      const isLearned = state.learnedIds.includes(card.id);
+
+      container.innerHTML = `
+        <div class="flashcard-wrap">
+          <div class="flashcard-top">
+            <span>Քարտ ${(fcIndex % fcDeck.length) + 1} / ${fcDeck.length}</span>
+            <div>
+              <button class="btn" id="fcShuffleBtn">🔀 Խառնել</button>
+              <button class="btn" id="fcFlipDirBtn">${fcReverse ? "HY ➔ EN" : "EN ➔ HY"}</button>
+            </div>
+          </div>
+
+          <div class="card-scene" id="cardScene">
+            <div class="card-inner ${fcFlipped ? "flipped" : ""}">
+              <div class="card-face">
+                <div class="card-lang">${fcReverse ? "Հայերեն" : "English"}</div>
+                <div class="card-word">${frontText}</div>
+                <button class="btn" id="fcSpeakBtn">🔊 Արտասանել</button>
+                <div class="card-hint">Սեղմիր քարտին՝ շրջելու համար</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="card-lang">${fcReverse ? "English" : "Հայերեն"}</div>
+                <div class="card-word">${backText}</div>
+                <div class="card-hint">${card.en}</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flashcard-controls">
+            <button class="btn" id="fcPrevBtn">⬅ Նախորդը</button>
+            <button class="btn btn-primary" id="fcMarkBtn">${isLearned ? "✓ Սովորած է" : "Նշել սովորած"}</button>
+            <button class="btn" id="fcNextBtn">Հաջորդը ➡</button>
+          </div>
+        </div>
+      `;
+
+      document.getElementById("cardScene").onclick = () => {
+        fcFlipped = !fcFlipped;
+        renderFlashcards(container, words);
+      };
+      document.getElementById("fcSpeakBtn").onclick = (e) => {
+        e.stopPropagation();
+        speak(card.en);
+      };
+      document.getElementById("fcPrevBtn").onclick = () => {
+        fcFlipped = false;
+        fcIndex = (fcIndex - 1 + fcDeck.length) % fcDeck.length;
+        renderFlashcards(container, words);
+      };
+      document.getElementById("fcNextBtn").onclick = () => {
+        fcFlipped = false;
+        fcIndex = (fcIndex + 1) % fcDeck.length;
+        renderFlashcards(container, words);
+      };
+      document.getElementById("fcShuffleBtn").onclick = () => {
+        fcDeck = [...words].sort(() => Math.random() - 0.5);
+        fcIndex = 0;
+        fcFlipped = false;
+        renderFlashcards(container, words);
+      };
+      document.getElementById("fcFlipDirBtn").onclick = () => {
+        fcReverse = !fcReverse;
+        fcFlipped = false;
+        renderFlashcards(container, words);
+      };
+      document.getElementById("fcMarkBtn").onclick = () => {
+        if (!state.learnedIds.includes(card.id)) toggleLearned(card.id);
+        fcFlipped = false;
+        fcIndex = (fcIndex + 1) % fcDeck.length;
+        renderFlashcards(container, words);
+      };
+    }
+
+    let quizItems = [];
+    let quizIdx = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    function buildQuiz(words) {
+      const pool = [...words].sort(() => Math.random() - 0.5);
+      quizItems = pool.map(target => {
+        const distractors = WORDS
+          .filter(w => w.id !== target.id)
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 3);
+        const options = [target, ...distractors].sort(() => Math.random() - 0.5);
+        return { target, options };
+      });
+      quizIdx = 0;
+      quizScore = 0;
+      quizAnswered = false;
+    }
+
+    function renderQuiz(container, words) {
+      if (!quizItems.length || !quizItems.some(q => words.some(w => w.id === q.target.id))) {
+        buildQuiz(words);
+      }
+
+      if (quizIdx >= quizItems.length) {
+        container.innerHTML = `
+          <div class="quiz-box" style="text-align:center;">
+            <h2 style="margin-bottom:10px;">Թեստն ավարտվեց</h2>
+            <p style="font-size:1.2rem;margin-bottom:20px;">Արդյունք՝ <strong>${quizScore} / ${quizItems.length}</strong></p>
+            <button class="btn btn-primary" id="quizRestartBtn">Սկսել նորից</button>
+          </div>
+        `;
+        document.getElementById("quizRestartBtn").onclick = () => {
+          buildQuiz(words);
+          renderQuiz(container, words);
+        };
+        return;
+      }
+
+      const item = quizItems[quizIdx];
+      container.innerHTML = `
+        <div class="quiz-box">
+          <div class="quiz-progress">
+            <span>Հարց ${quizIdx + 1} / ${quizItems.length}</span>
+            <span>Ճիշտ պատասխաններ՝ ${quizScore}</span>
+          </div>
+          <div class="quiz-question">${item.target.en} <button class="icon-btn" style="display:inline-grid;vertical-align:middle;" onclick="speak('${item.target.en.replace(/'/g, "\\'")}')">🔊</button></div>
+          <div class="quiz-options">
+            ${item.options.map(opt => `
+              <button class="quiz-opt" data-id="${opt.id}">${opt.hy}</button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+
+      container.querySelectorAll(".quiz-opt").forEach(btn => {
+        btn.onclick = () => {
+          if (quizAnswered) return;
+          quizAnswered = true;
+          const chosenId = Number(btn.dataset.id);
+          const isCorrect = chosenId === item.target.id;
+          if (isCorrect) {
+            quizScore++;
+            btn.classList.add("correct");
+            if (!state.learnedIds.includes(item.target.id)) toggleLearned(item.target.id);
+          } else {
+            btn.classList.add("wrong");
+            container.querySelector(`.quiz-opt[data-id="${item.target.id}"]`).classList.add("correct");
+          }
+          setTimeout(() => {
+            quizIdx++;
+            quizAnswered = false;
+            renderQuiz(container, words);
+          }, 950);
+        };
+      });
+    }
+
+    let matchPairs = [];
+    let matchLeft = [];
+    let matchRight = [];
+    let selectedLeft = null;
+    let selectedRight = null;
+    let matchedIds = new Set();
+
+    function initMatch(words) {
+      matchPairs = [...words].sort(() => Math.random() - 0.5).slice(0, 6);
+      matchLeft = [...matchPairs].sort(() => Math.random() - 0.5);
+      matchRight = [...matchPairs].sort(() => Math.random() - 0.5);
+      selectedLeft = null;
+      selectedRight = null;
+      matchedIds = new Set();
+    }
+
+    function renderMatch(container, words) {
+      if (!matchPairs.length || !matchPairs.some(p => words.some(w => w.id === p.id))) {
+        initMatch(words);
+      }
+
+      if (matchedIds.size === matchPairs.length) {
+        container.innerHTML = `
+          <div class="quiz-box" style="text-align:center;">
+            <h2 style="margin-bottom:12px;">Հիանալի է՝ բոլոր զույգերը համապատասխանեցվեցին</h2>
+            <button class="btn btn-primary" id="matchAgainBtn">Նոր 6 բառ</button>
+          </div>
+        `;
+        document.getElementById("matchAgainBtn").onclick = () => {
+          initMatch(words);
+          renderMatch(container, words);
+        };
+        return;
+      }
+
+      container.innerHTML = `
+        <div style="text-align:center;margin-bottom:14px;color:var(--muted);">
+          Ընտրիր անգլերեն բառը և դրա հայերեն թարգմանությունը (${matchedIds.size}/${matchPairs.length})
+        </div>
+        <div class="match-grid">
+          <div class="match-col">
+            ${matchLeft.map(item => `
+              <button class="match-card ${selectedLeft === item.id ? "selected" : ""} ${matchedIds.has(item.id) ? "matched" : ""}" data-side="left" data-id="${item.id}">${item.en}</button>
+            `).join("")}
+          </div>
+          <div class="match-col">
+            ${matchRight.map(item => `
+              <button class="match-card ${selectedRight === item.id ? "selected" : ""} ${matchedIds.has(item.id) ? "matched" : ""}" data-side="right" data-id="${item.id}">${item.hy}</button>
+            `).join("")}
+          </div>
+        </div>
+      `;
+
+      container.querySelectorAll(".match-card").forEach(card => {
+        card.onclick = () => {
+          const id = Number(card.dataset.id);
+          const side = card.dataset.side;
+          if (side === "left") selectedLeft = id;
+          else selectedRight = id;
+
+          if (selectedLeft !== null && selectedRight !== null) {
+            if (selectedLeft === selectedRight) {
+              matchedIds.add(selectedLeft);
+              if (!state.learnedIds.includes(selectedLeft)) toggleLearned(selectedLeft);
+              selectedLeft = null;
+              selectedRight = null;
+              renderMatch(container, words);
+            } else {
+              const lBtn = container.querySelector(`.match-card[data-side="left"][data-id="${selectedLeft}"]`);
+              const rBtn = container.querySelector(`.match-card[data-side="right"][data-id="${selectedRight}"]`);
+              lBtn?.classList.add("error");
+              rBtn?.classList.add("error");
+              setTimeout(() => {
+                selectedLeft = null;
+                selectedRight = null;
+                renderMatch(container, words);
+              }, 500);
+            }
+          } else {
+            renderMatch(container, words);
+          }
+        };
+      });
+    }
+
+    document.querySelectorAll(".switch-btn").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".switch-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.scope = btn.dataset.scope;
+        saveState();
+        renderSelector();
+        renderMain();
+      };
+    });
+
+    document.querySelectorAll(".mode-btn").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".mode-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        state.mode = btn.dataset.mode;
+        quizItems = [];
+        matchPairs = [];
+        fcDeck = [];
+        saveState();
+        renderMain();
+      };
+    });
+
+    document.getElementById("searchInput").addEventListener("input", () => {
+      renderSelector();
+      renderMain();
+    });
+
+    document.getElementById("resetProgressBtn").onclick = () => {
+      if (!confirm("Զրոյացնե՞լ ամբողջ սովորած բառերի առաջընթացը:")) return;
+      state.learnedIds = [];
+      state.todayIds = [];
+      saveState();
+      updateStats();
+      renderSelector();
+      renderMain();
+    };
+
+    updateStats();
+    renderSelector();
+    renderMain();
+  </script>
+</body>
+</html>
